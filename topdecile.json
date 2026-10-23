@@ -1,0 +1,70 @@
+{
+ "a": 0.9,
+ "n": 400000,
+ "subsets": {
+  "all": {
+   "n": 400000,
+   "random": 0.8907870786157746,
+   "mu": 0.11934153477589632,
+   "informed": 0.07059474269245322,
+   "blind": 0.1849120087228922,
+   "mu_closes_of_range": 0.8660268681025938,
+   "informed_closes_of_mu_gap": 0.4084645984734612,
+   "blind_closes_of_mu_gap": -0.5494354842186872
+  },
+  "top decile of mu-hat": {
+   "n": 40000,
+   "random": 0.7821342773482437,
+   "mu": 0.363888984361608,
+   "informed": 0.17688526615929515,
+   "blind": 0.48773673500992865,
+   "mu_closes_of_range": 0.5347487063278431,
+   "informed_closes_of_mu_gap": 0.5139032128999028,
+   "blind_closes_of_mu_gap": -0.3403448743181773
+  },
+  "top 5% of mu-hat": {
+   "n": 20000,
+   "random": 0.7682303470616505,
+   "mu": 0.40450233644375444,
+   "informed": 0.1925323414719447,
+   "blind": 0.5382467600415857,
+   "mu_closes_of_range": 0.47346217447552474,
+   "informed_closes_of_mu_gap": 0.5240266269791594,
+   "blind_closes_of_mu_gap": -0.330639434060298
+  },
+  "top 1% of mu-hat": {
+   "n": 4000,
+   "random": 0.7426010306369811,
+   "mu": 0.45166919414066226,
+   "informed": 0.22727673168283113,
+   "blind": 0.60640538429268,
+   "mu_closes_of_range": 0.39177408122739366,
+   "informed_closes_of_mu_gap": 0.496807099905842,
+   "blind_closes_of_mu_gap": -0.34258743381074735
+  },
+  "top decile of observed y": {
+   "n": 40000,
+   "random": 0.7281717983150684,
+   "mu": 0.4086518124888371,
+   "informed": 0.2106857869556399,
+   "blind": 0.46615717303521986,
+   "mu_closes_of_range": 0.43879752905231306,
+   "informed_closes_of_mu_gap": 0.48443692033937796,
+   "blind_closes_of_mu_gap": -0.14071970021655936
+  },
+  "top 1% of observed y": {
+   "n": 4000,
+   "random": 0.5968310294578717,
+   "mu": 0.5560763547626938,
+   "informed": 0.27214370394898724,
+   "blind": 0.575960148647481,
+   "mu_closes_of_range": 0.06828511368150081,
+   "informed_closes_of_mu_gap": 0.5106001152213623,
+   "blind_closes_of_mu_gap": -0.03575730871216896
+  }
+ },
+ "paper_closed": {
+  "all_test": 0.20224719101123598,
+  "top_observed_decile": 0.21554770318021194
+ }
+}
