@@ -52,6 +52,22 @@ So the two halves of their title come apart cleanly. **The sizing failure grows 
 flow (2.1× → 4.3× → 17.9×). The ranking quality, measured scale-free, does not degrade at
 all.** That is a stronger version of their thesis than the paper states.
 
+**4. The baseline curve is exact, and depends on one estimable number.** With `W = σ²`
+lognormal and `τ = SD(log W)`, ranking by any increasing function of `σ` gives exactly
+
+    normalised MSE(f) = Φ( Φ⁻¹(1−f) − τ ) / (1 − f)
+
+so the heteroscedasticity exponent and the spread of the predictions are not separately
+identifiable — only `τ` enters (`closedform.py`, three matched-`τ` pairs agreeing to 0.002).
+Which makes the dilution readable off one number you can estimate from your own residuals:
+
+| τ = SD(log σ²) | 0.0 | 0.5 | 1.0 | 1.5 | 2.0 | 2.5 | 3.0 |
+|---|---|---|---|---|---|---|---|
+| % of AUSE's range already spent | 0.0 | 36.0 | 62.7 | 79.1 | 88.6 | 93.8 | 96.5 |
+
+The oracle curve has no closed form (`log r² = τG + log χ²₁`, and the second term is not
+normal), so it stays Monte Carlo.
+
 ## Running it
 
 ```
@@ -59,6 +75,7 @@ python3 ause.py        # instrument validation, must print 3/3 before anything e
 python3 lemma.py       # the ordering-only lemma, 6/6 with a negative control
 python3 blindness.py   # the dilution curve -> blindness.json
 python3 topdecile.py   # the range effect  -> topdecile.json
+python3 closedform.py  # the exact baseline curve and the tau table
 python3 plot.py        # the figure
 ```
 
